@@ -1,0 +1,255 @@
+@font-face {
+	font-family: 'ITC Avant Garde Gothic LT Bold';
+	src: URL('../fonts/ITC Avant Garde Gothic LT Bold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'AvenirLTStd-Book';
+	src: URL('../fonts/AvenirLTStd-Book.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'AvenirLTStd-Black';
+	src: URL('../fonts/AvenirLTStd-Black.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'AvenirLTStd-Roman';
+	src: URL('../fonts/AvenirLTStd-Roman.ttf') format('truetype');
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 1em;
+	color: #000;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.bg-image {
+	background-image: url('../img/bg.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.content {
+	margin-top: 96px;
+	display: flex;
+	justify-content: center;
+	justify-items: center;
+}
+
+.itc_font {
+	font-family: 'ITC Avant Garde Gothic LT Bold';
+}
+
+.avenir {
+	font-family: 'AvenirLTStd-Book';
+}
+
+.content .title {
+	max-width: 494px;
+	height: 123px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 2.6041666666666665em;
+	line-height: 130%;
+	margin-bottom: 4rem;
+}
+
+.content .subtitle {
+	color: #666666;
+	max-width: 432px;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 1.3333333333333333em;
+	line-height: 160%;
+}
+
+.content .btn-link {
+	margin-top: 32px;
+}
+
+.content .btn-link a {
+	font-family: 'AvenirLTStd-Black';
+	color: #000;
+	text-decoration: none;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 1.0666666666666667em;
+	line-height: 17px;
+	text-transform: capitalize;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #000;
+	width: fit-content;
+}
+
+.content .cloth-container {
+	margin-top: 68px;
+	display: flex;
+	overflow-x: hidden;
+	flex-direction: row;
+	justify-content: center;
+	gap: 32px;
+}
+
+.cloth-title {
+	margin-top: 12px;
+	font-family: 'AvenirLTStd-Roman';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 1.0666666666666667em;
+	line-height: 160%;
+	color: #000;
+}
+
+.cloth .price {
+	margin-top: 4px;
+	font-family: 'AvenirLTStd-Black';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 1.0666666666666667em;
+	line-height: 160%;
+	color: #000;
+}
+
+.colors {
+	display: flex;
+	flex-direction: row;
+	gap: 9px;
+}
+
+.cloth .subcontent {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+input[name='color']:checked {
+	outline: none;
+	border: none;
+}
+
+input[value='purple'][name='color'] {
+	accent-color: #cb99cc;
+}
+
+input[value='brown'][name='color'] {
+	accent-color: #cc9999;
+}
+
+input[value='blue'][name='color'] {
+	accent-color: #99c3cc;
+}
+
+.colors .input-color {
+	cursor: pointer;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	height: 14px;
+	width: 14px;
+	position: relative;
+}
+
+.colors .input-color.active {
+	border: 1.5px solid #000;
+	background-color: white;
+}
+
+.colors .input-color.active::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	width: 9px;
+	height: 9px;
+}
+
+.blue,
+.blue::after {
+	background-color: #99c3cc;
+}
+
+.brown,
+.brown::after {
+	background-color: #cc9999;
+}
+
+.purple,
+.purple::after {
+	background-color: #cb99cc;
+}
+
+.green,
+.green::after {
+	background-color: #a6cc99;
+}
+
+@media only screen and (max-width: 1600px) {
+	.content .padding-content {
+		width: 100%;
+		padding: 0 24px;
+	}
+}
+
+@media only screen and (max-width: 1366px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+
+	.bg-image {
+		height: 100vh;
+	}
+
+	.content {
+		margin-top: -320px;
+	}
+
+	.content .title {
+		color: #fff;
+		font-style: normal;
+		font-weight: 700;
+		font-size: 3em;
+		line-height: 130%;
+		margin-bottom: 6rem;
+	}
+
+	.content .subtitle {
+		display: none;
+	}
+
+	.content .btn-link a {
+		color: #fff;
+		border-color: #fff;
+		font-size: 1.5em;
+	}
+
+	.content .padding-content {
+		width: 100%;
+		padding: 0 24px;
+	}
+}
